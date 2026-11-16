@@ -1,0 +1,10 @@
+{
+  "routes": [
+    {
+      "match": { "pathPrefix": "/api" },
+      "upstream": "http://localhost:4000",
+      "stripPrefix": true,
+      "healthCheck": { "path": "/health", "intervalMs": 15000 }
+    }
+  ]
+}
