@@ -28,6 +28,8 @@ export default function Dashboard() {
         fetch("/api/routes", { cache: "no-store" }),
         fetch("/api/summary", { cache: "no-store" }),
       ]);
+      console.log("");
+
       if (!routeResponse.ok || !summaryResponse.ok)
         throw new Error("The control plane could not be reached.");
       const routeData = await routeResponse.json();
